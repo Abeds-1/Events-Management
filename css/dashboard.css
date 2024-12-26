@@ -1,0 +1,138 @@
+/* Sidebar Styles */
+#accordionSidebar {
+    color: white; /* Text color */
+    position: fixed;
+    height: 100%;
+    top: 0;
+    background-color: #5900b3; /* Sidebar background color */
+    padding-top: 20px;
+    transition: width 0.3s ease; 
+    width: 200px; 
+    overflow-x: hidden; 
+}
+
+#accordionSidebar.collapsed {
+    left: -200px; /* Collapsed state position */
+}
+
+/* Brand Text in Sidebar */
+.sidebar-brand-text {
+    color: white; /* Brand text color */
+}
+
+/* Navbar Link Hover Effect */
+.navbar-nav .nav-link:hover {
+    color: #83a6cc; /* Hover text color */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    margin-left: 200px; /* Adjust content margin based on sidebar width */
+    padding: 20px;
+}
+
+/* Primary Button Styles */
+.btn-primary {
+    background-color: #5900b3; /* Button background color */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #375abb; /* Button hover background color */
+}
+
+/* Success Button Styles */
+.btn-success {
+    background-color: #1cc88a; /* Button background color */
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #17a673; /* Button hover background color */
+}
+
+/* Table Styles */
+.table {
+    background-color: white; /* Table background color */
+}
+
+/* Topbar Styles */
+.topbar {
+    background-color: white;
+    border-bottom: 1px solid #e3e6f0; /* Bottom border color */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Navbar Search Styles */
+.navbar-search {
+    padding-left: 20px; /* Adjust search padding */
+}
+
+/* Profile Image Styles */
+.img-profile {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Sidebar Link Styles */
+#accordionSidebar a.nav-link {
+    padding-left: 20px; /* Adjust link padding */
+}
+
+/* Sidebar Brand Styles */
+.sidebar-brand.d-flex.align-items-center.justify-content-center {
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+/* Border Left Styles */
+.border-left-primary {
+    border-left: 4px solid #5900b3; /* Left border color for primary element */
+}
+
+.border-left-success {
+    border-left: 4px solid #28a745; /* Left border color for success element */
+}
+
+/* Dropdown Styles */
+.dropdown-divider {
+    margin: 0.5rem 0; /* Divider margin */
+}
+
+/* Badge Styles */
+.badge-danger {
+    background-color: #dc3545; /* Danger badge background color */
+}
+
+/* Notification List Styles */
+#notificationList {
+    max-width: 300px; /* Adjust the width as needed */
+}
+
+.notification-item {
+    white-space: normal; /* Allow text to wrap in notification items */
+}
+
+/* Event List Styles */
+.event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.event-item {
+    padding: 8px; /* Adjust event item padding */
+}
+
+/* Dropdown List Styles */
+.dropdown-list {
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+}

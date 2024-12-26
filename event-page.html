@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+
+    <!-- Stylesheets -->
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/event-page.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Event Details Section -->
+        <h1 class="text-center mb-4">Event Details</h1>
+
+        <!-- Event Card Container -->
+        <div class="event-card" id="eventDetailsContainer">
+            <!-- Event details will be dynamically added here -->
+        </div>
+
+        <!-- Feedback Form Section -->
+        <div class="event-form">
+            <h2 class="mb-4">Submit Feedback</h2>
+            <!-- Feedback Form -->
+            <form id="feedbackForm">
+                <div class="mb-3">
+                    <label for="feedbackName" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="feedbackName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="feedbackMessage" class="form-label">Feedback Message</label>
+                    <textarea class="form-control" id="feedbackMessage" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+            </form>
+        </div>
+
+        <!-- Feedback List Section -->
+        <div class="feedback-list" id="feedbackListContainer">
+            <!-- Feedback from attendees will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Event Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Register for event: <span id="eventName"></span></p>
+                    <button id="registerButton" type="button" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this event?</p>
+                    <button id="deleteButton" type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="bootstrap-5.3.2-dist/jquery/jquery.min.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <script src="js/event-page.js"></script>
+</body>
+
+</html>

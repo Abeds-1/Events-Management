@@ -1,0 +1,56 @@
+/* Body Background Color */
+body {
+    background-color: #f8f9fa; /* Body background color */
+}
+
+/* Profile Container Styling */
+.profile-container {
+    background-color: #ffffff; /* Container background color */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for container */
+}
+
+/* Profile Image Styling */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Profile Name Styling */
+.profile-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #5900b3; /* Name text color */
+}
+
+/* Profile Email Styling */
+.profile-email {
+    font-size: 18px;
+    color: #6c757d; /* Email text color */
+}
+
+/* Profile Bio Styling */
+.profile-bio {
+    margin-top: 20px; /* Top margin for bio */
+}
+
+/* Profile Events Styling */
+.profile-events {
+    margin-top: 30px; /* Top margin for events */
+}
+
+/* Event Item Styling */
+.event-item {
+    margin-bottom: 10px; /* Bottom margin for event items */
+}
+
+/* Event Item Line Styling */
+.event-item-line {
+    border-top: 1px solid #dee2e6; /* Border color for event item line */
+    margin-top: 10px; /* Top margin for event item line */
+    padding-top: 10px; /* Top padding for event item line */
+}

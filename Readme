@@ -1,0 +1,29 @@
+Download and Install XAMPP:
+
+Download XAMPP from https://www.apachefriends.org/index.html.
+Install XAMPP on your machine by following the installation instructions for your operating system.
+Clone or Download Project:
+
+Clone your project repository or download the project files from the repository.
+Move Project to htdocs:
+
+Locate the XAMPP htdocs directory on your machine.
+On Windows: C:\xampp\htdocs\Web - Event Manager
+On Linux: /opt/lampp/htdocs/Web - Event Manager
+Move the entire project folder into the htdocs directory.
+Import Database:
+
+Find the eventorganizer.sql file in your project folder.
+Open phpMyAdmin by going to http://localhost/phpmyadmin in your web browser.
+Create a new database named eventorganizer.
+Select the newly created database and go to the "Import" tab.
+Upload the eventorganizer.sql file and execute the import to populate the database with the necessary tables and data.
+Start XAMPP:
+
+Launch XAMPP and ensure both Apache and MySQL services are running.
+Open Your Web Browser:
+
+Open your web browser and navigate to http://localhost/Web - Event Manager.
+Done:
+
+Your project should now be running locally. Explore it in your web browser.

@@ -1,0 +1,15 @@
+/* Body Background Color */
+body {
+    background-color: #f8f9fa; /* Body background color */
+}
+
+/* Margin Bottom for Event Card */
+.event-card {
+    margin-bottom: 20px; /* Bottom margin for event card */
+}
+
+/* Event Card Header Styles */
+.event-card-header {
+    background-color: #5900b3; /* Header background color */
+    color: #fff; /* Text color */
+}

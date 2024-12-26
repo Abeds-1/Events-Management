@@ -1,0 +1,130 @@
+/* General styling for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light background color */
+    color: #343a40; /* Dark text color */
+}
+
+/* Jumbotron styling */
+.jumbotron {
+    background: linear-gradient(to right, #5900b3, #833ab4); /* Gradient background using primary colors */
+    color: #fff; /* White text color */
+    padding: 100px 0;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.jumbotron p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Main button styling */
+.main-button {
+    background-color: #fff; /* White background color */
+    color: #5900b3; /* Primary color */
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-button:hover {
+    background-color: #5900b3; /* Primary color on hover */
+    color: #fff; /* White text color on hover */
+}
+
+/* App image container styling */
+.app-image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.app-image {
+    width: 100%;
+    height: 800px;
+    object-fit: fill;
+    margin-bottom: 40px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+
+/* Features section styling */
+/* Key Features section styling */
+.features-section {
+    background-color: #fff; /* White background color */
+    padding: 80px 0;
+    margin-bottom: 60px;
+    text-align: center; /* Center the content */
+}
+
+.feature-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #5900b3; /* Primary color */
+}
+
+.feature-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.feature-description {
+    font-size: 1.2em;
+}
+
+.features-section .row {
+    justify-content: center; /* Center the columns within the row */
+}
+
+.features-section .col-md-4 {
+    margin-bottom: 30px; /* Add some spacing between columns */
+}
+
+/* Footer styling */
+footer.content-wrapper.sticky-footer.bg-dark.text-white.py-5 {
+    padding: 0;
+}
+
+footer a {
+    color: #fff; /* White text color for footer links */
+}
+
+/* Contact section styling */
+.contact-section {
+    padding: 100px 0;
+}
+
+.contact-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #fff; /* White text color */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-control {
+    margin-bottom: 20px;
+    border-radius: 5px;
+}

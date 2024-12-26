@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div>
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion show"
+            style="border-top-right-radius: 15px;" id="accordionSidebar">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                <div class="sidebar-brand-icon rotate-n-15 text-white fs-4">
+                    <i class="fa-solid fa-gift" style="transform: rotate(15deg);"></i>
+                </div>
+                <div class="sidebar-brand-text mx-2 fs-5">Event Organizer</div>
+            </a>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="events-editing.html">
+                    <i class="fas fa-edit"></i>
+                    <span>Edit Events</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="my-events.html">
+                    <i class="fa fa-calendar"></i>
+                    <span>My Events</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="explore-events.html">
+                    <i class="fas fa-search"></i>
+                    <span>Explore Events</span>
+                </a>
+            </li>
+
+            <!-- Create Event Button (visible only when the user is logged in) -->
+            <li class="nav-item">
+                <a class="nav-link" href="event-form.html">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Create Event</span>
+                </a>
+            </li>
+
+            <!-- Move the Logout link to the far end of the sidebar -->
+            <li class="nav-item" style="margin-top: auto;">
+                <a class="nav-link" href="php/logout.php">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+
+
+
+        <div class="d-flex flex-column content-wrapper">
+
+            <nav class="navbar mb-4 shadow" style="border-radius: 10px;">
+                <div style="display: flex; flex-direction: row;">
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3" type="button"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <form id="eventSearchForm" class="navbar-search my-2 my-lg-0">
+                        <div class="input-group">
+                            <input type="text" id="searchInput"
+                                class="form-control bg-body-secondary border-0 small rounded-pill shadow-sm"
+                                placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary rounded-pill" type="button" onclick="searchEvents()">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="searchResultsDropdown" class="dropdown-menu" style="position: absolute;"></div>
+                    </form>
+                </div>
+
+
+                <div style="display: flex; flex-direction: row; padding-right: 30px; align-items: center;">
+
+
+
+                    <div class="col" style="margin-right: 10px;">
+                        <div class="dropdown">
+                            <div class="btn btn-secondary dropdown-toggle bg-dark" role="button"
+                                id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-bell"></i>
+                                <span class="badge badge-danger ml-1" id="notificationBadge">0</span>
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="notificationDropdown" id="notificationList">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="dropdown">
+                            <div class="btn btn-secondary dropdown-toggle bg-dark" role="button" id="userDropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="name" class="mr-2 d-none d-lg-inline text-gray-600 small">Bilal Ahmad</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="profile.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="php/logout.php" class="dropdown-item">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Event Dashboard</h1>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xl-6 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Registered Events
+                                </div>
+                                <div id="counter" class="h5 mb-0 font-weight-bold text-gray-800">Registered Events</div>
+                                <p class="mt-2">Manage your registered events, view details, and update your
+                                    participation.</p>
+                                <a href="events-editing.html" class="btn btn-primary">Manage Registered Events</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-xl-6 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Explore
+                                    Events</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">Browse Events Happening Near You
+                                </div>
+                                <p class="mt-2">Discover and register for events organized by others.</p>
+                                <a href="explore-events.html" class="btn btn-success">Explore Events</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">My Registered Events</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Event Name</th>
+                                                <th>Date</th>
+                                                <th>Location</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="dataTableBody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="content-wrapper sticky-footer bg-dark text-white py-5" style="padding: 0px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <h5>Contact Us</h5>
+                        <p>Email: <a href="mailto:info@eventorganizer.com"
+                                class="text-white">info@eventorganizer.com</a></p>
+                        <p>Phone: 123-456-7890</p>
+                        <p>Address: 123 Main Street, City, Country</p>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <h5>Follow Us</h5>
+                        <p>Stay connected with us on social media:</p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="https://www.facebook.com" target="_blank"
+                                    class="text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li class="list-inline-item"><a href="https://www.twitter.com" target="_blank"
+                                    class="text-white"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li class="list-inline-item"><a href="https://www.instagram.com" target="_blank"
+                                    class="text-white"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-lg-12 text-center">
+                        <div class="copyright">
+                            <p class="mb-0">&copy; Event Organizer 2023. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.3.2-dist/jquery/jquery.min.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/dashboardtable.js"></script>
+    <script src="js/notifications&name.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/dashboard-search.js"></script>
+
+</body>
+
+</html>

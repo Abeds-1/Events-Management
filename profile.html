@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page -->
+    <title>User Profile</title>
+    
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+    
+    <!-- Custom CSS file for profile styling -->
+    <link href="css/profile.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Container for the profile page -->
+    <div class="container mt-5" style="margin-bottom: 30px;">
+        <!-- Row for centering content -->
+        <div class="row justify-content-center">
+            <!-- Column for profile content -->
+            <div class="col-md-6 profile-container">
+                <!-- Profile information section -->
+                <div class="text-center">
+                    <!-- Profile image -->
+                    <img src="img/undraw_profile.svg" alt="Profile" class="profile-image">
+                    <!-- User name -->
+                    <div class="profile-name"></div>
+                    <!-- User email -->
+                    <div class="profile-email"></div>
+                    <!-- User bio -->
+                    <div class="profile-bio mt-3">
+                        Web developer passionate about creating user-friendly and interactive web applications.
+                    </div>
+                </div>
+                <!-- Horizontal line for visual separation -->
+                <hr>
+                <!-- Section for displaying upcoming events -->
+                <div class="profile-events">
+                    <h5>Upcoming Events</h5>
+                    <!-- Event list container -->
+                    <div id="event-list"></div>
+                </div>
+                <!-- Logout button -->
+                <a href="php/logout.php" id="logout-btn" class="btn btn-danger mt-3">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery script -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <!-- Custom JavaScript for profile functionality -->
+    <script src="js/profile.js"></script>
+</body>
+
+</html>

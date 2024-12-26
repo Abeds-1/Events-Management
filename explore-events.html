@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Explorer</title>
+
+    <!-- Stylesheets -->
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/explore-events.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- Title Section -->
+        <h1 class="text-center mb-4">Explore Events</h1>
+
+        <!-- Event List Container -->
+        <div id="event-list">
+            <!-- Events will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Event Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Register for event: <span id="eventName"></span></p>
+                    <button id="registerButton" type="button" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <script src="js/explore-events.js"></script>
+</body>
+
+</html>

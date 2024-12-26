@@ -1,0 +1,43 @@
+/* Body Background Color */
+body {
+    background-color: #f8f9fa; /* Body background color */
+}
+
+/* Form Container Styles */
+.form-container {
+    background-color: #ffffff; /* Form container background color */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    animation: fadeIn 0.5s ease; /* Fade-in animation */
+}
+
+/* Fade-in Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Primary Button Styles */
+.btn-primary {
+    background-color: #5900b3; /* Button background color */
+    border: none;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.btn-primary:hover {
+    background-color: #450a85; /* Button hover background color */
+}
+
+/* Form Group Label Styles */
+.form-group label {
+    color: #5900b3; /* Label text color */
+    font-weight: bold;
+}

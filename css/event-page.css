@@ -1,0 +1,46 @@
+/* Body Background Color */
+body {
+    background-color: #f8f9fa; /* Body background color */
+}
+
+/* Container Max Width */
+.container {
+    max-width: 800px; /* Maximum container width */
+}
+
+/* Event Card Styles */
+.event-card {
+    background-color: #ffffff; /* Card background color */
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Heading Styles */
+h1, h2 {
+    color: #5900b3; /* Heading text color */
+}
+
+/* Event Form Styles */
+.event-form {
+    background-color: #ffffff; /* Form background color */
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Feedback List Styles */
+.feedback-list {
+    margin-top: 20px;
+}
+
+/* Feedback Card Styles */
+.feedback-card {
+    background-color: #f8d7da; /* Feedback card background color */
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
